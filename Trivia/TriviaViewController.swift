@@ -8,6 +8,20 @@ import UIKit
 
 class TriviaViewController: UIViewController {
     
+    private let TriviaView : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    private var isFirstAnswer : Bool
+    private var isSecondAnswer : Bool
+    private var isThirdAnswer : Bool
+    private var isFourthAnswer : Bool
+    
+    private var idx : Int
+    private var counter : Int
+    
+    struct Guesses {
+        static var correct : Int = 0
+    }
+    
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var count: UILabel!
     
@@ -15,16 +29,6 @@ class TriviaViewController: UIViewController {
     @IBOutlet weak var secondAnswer: UIButton!
     @IBOutlet weak var thirdAnswer: UIButton!
     @IBOutlet weak var fourthAnswer: UIButton!
-    
-    
-    var isFirstAnswer : Bool = false
-    var isSecondAnswer : Bool = false
-    var isThirdAnswer : Bool = false
-    var isFourthAnswer : Bool = false
-    
-    var idx : Int = 0
-    var counter : Int = 1
-    var correct : Int = 0
     
     let questions = [
         "Who created C++?",
@@ -37,13 +41,20 @@ class TriviaViewController: UIViewController {
         1 : ["Hypertext Transfer Protocol Secure","Hungry Toucans Taste-test Pineapples Savagely", "Harmonizing Tigers Tickle the Piano Strings", "Hypertxet Transfer Protocol Secure"],
         2 : ["1989", "1987", "1988", "1990"]
     ]
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.idx = 0
+        self.counter = 0
+        self.isFirstAnswer = false
+        self.isSecondAnswer = false
+        self.isThirdAnswer = false
+        self.isFourthAnswer = false
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        idx = 0
-        counter = 0
-        correct = 0
         // generate question
         generateTrivia()
         
@@ -58,7 +69,9 @@ class TriviaViewController: UIViewController {
         
         if (counter == 3) {
             // change storyboard
-            performSegue(withIdentifier: "EndView", sender: nil)
+            let endView = TriviaView.instantiateViewController(withIdentifier: "EndView") as! EndViewController
+            self.present(endView, animated: true, completion: nil)
+            return
         }
         
         count.text = "\(counter+1)/3"
@@ -97,10 +110,7 @@ class TriviaViewController: UIViewController {
             var ptr : Int = start+1
             
             while (ptr != start) {
-                if (ptr >= length) {
-                    ptr = 0
-                }
-                
+                ptr %= length
                 if let ans = answers[i]?[ptr] {
                     randomOrder.append(ans)
                 }
@@ -113,21 +123,20 @@ class TriviaViewController: UIViewController {
             }
             
             for j in 0..<4 {
-                if let answer = answers[i]?[j] {
-                    switch j {
-                    case 0:
-                        firstAnswer.setTitle(answer, for: .normal)
-                    case 1:
-                        secondAnswer.setTitle(answer, for: .normal)
-                    case 2:
-                        thirdAnswer.setTitle(answer, for: .normal)
-                    case 3:
-                        fourthAnswer.setTitle(answer, for: .normal)
-                    default:
-                        break
-                    }
-                    setCorrectAnswer(i: i, order: j, given: answer)
+                let answer = randomOrder[j]
+                switch j {
+                case 0:
+                    firstAnswer.setTitle(answer, for: .normal)
+                case 1:
+                    secondAnswer.setTitle(answer, for: .normal)
+                case 2:
+                    thirdAnswer.setTitle(answer, for: .normal)
+                case 3:
+                    fourthAnswer.setTitle(answer, for: .normal)
+                default:
+                    break
                 }
+                setCorrectAnswer(i: i, order: j, given: answer)
             }
         }
     }
@@ -135,39 +144,35 @@ class TriviaViewController: UIViewController {
     
     @IBAction func didClickFirst(_ sender: Any) {
         if (isFirstAnswer) {
-            correct += 1
+            Guesses.correct += 1
         }
         
-        print("clicked")
         generateTrivia()
     }
     
     
     @IBAction func didClickSecond(_ sender: Any) {
         if (isSecondAnswer) {
-            correct += 1
+            Guesses.correct += 1
         }
         
-        print("clicked")
         generateTrivia()
     }
     
     
     @IBAction func didClickThird(_ sender: Any) {
         if (isThirdAnswer) {
-            correct += 1
+            Guesses.correct += 1
         }
         
-        print("clicked")
         generateTrivia()
     }
     
     @IBAction func didClickFourth(_ sender: Any) {
         if (isFourthAnswer) {
-            correct += 1
+            Guesses.correct += 1
         }
         
-        print("clicked")
         generateTrivia()
     }
 }

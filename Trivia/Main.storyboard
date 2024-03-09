@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eQ5-1m-dRb">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="TriviaView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eQ5-1m-dRb" customClass="TriviaViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eny-ee-gUa">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOx-zS-khW">
-                                <rect key="frame" x="100" y="444" width="193" height="35"/>
+                                <rect key="frame" x="100" y="488" width="214" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Answer 1"/>
                                 <connections>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM3-cr-zMp">
-                                <rect key="frame" x="100" y="524" width="193" height="35"/>
+                                <rect key="frame" x="100" y="568" width="214" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Answer 2"/>
                                 <connections>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H08-gT-lKF">
-                                <rect key="frame" x="100" y="604" width="193" height="35"/>
+                                <rect key="frame" x="100" y="648" width="214" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Answer 3"/>
                                 <connections>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1Q-B2-8qi">
-                                <rect key="frame" x="100" y="684" width="193" height="35"/>
+                                <rect key="frame" x="100" y="728" width="214" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Answer 4"/>
                                 <connections>
@@ -50,13 +50,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X/3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLz-Ru-1Qz">
-                                <rect key="frame" x="147" y="109" width="99" height="21"/>
+                                <rect key="frame" x="147" y="98" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex2-3L-lfx">
-                                <rect key="frame" x="82" y="175" width="229" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex2-3L-lfx">
+                                <rect key="frame" x="82" y="164" width="250" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,6 +67,7 @@
                         <constraints>
                             <constraint firstItem="7Za-Tz-gvg" firstAttribute="trailing" secondItem="GM3-cr-zMp" secondAttribute="trailing" constant="100" id="1Ii-IR-3Pm"/>
                             <constraint firstItem="oLz-Ru-1Qz" firstAttribute="top" secondItem="7Za-Tz-gvg" secondAttribute="top" constant="50" id="9LQ-XV-vsC"/>
+                            <constraint firstItem="ex2-3L-lfx" firstAttribute="leading" secondItem="7Za-Tz-gvg" secondAttribute="leading" constant="82" id="A4Q-Mb-Jx0"/>
                             <constraint firstItem="GM3-cr-zMp" firstAttribute="leading" secondItem="7Za-Tz-gvg" secondAttribute="leading" constant="100" id="Beg-z3-2Uc"/>
                             <constraint firstItem="7Za-Tz-gvg" firstAttribute="trailing" secondItem="H08-gT-lKF" secondAttribute="trailing" constant="100" id="DoR-mB-gbI"/>
                             <constraint firstItem="H08-gT-lKF" firstAttribute="top" secondItem="GM3-cr-zMp" secondAttribute="bottom" constant="45" id="Htp-Iw-wZU"/>
@@ -75,18 +76,18 @@
                             <constraint firstItem="JOx-zS-khW" firstAttribute="leading" secondItem="7Za-Tz-gvg" secondAttribute="leading" constant="100" id="WlI-7e-Oh7"/>
                             <constraint firstItem="GM3-cr-zMp" firstAttribute="top" secondItem="JOx-zS-khW" secondAttribute="bottom" constant="45" id="bWm-AS-CbE"/>
                             <constraint firstItem="7Za-Tz-gvg" firstAttribute="trailing" secondItem="oLz-Ru-1Qz" secondAttribute="trailing" constant="147" id="bXO-UN-gbh"/>
-                            <constraint firstItem="ex2-3L-lfx" firstAttribute="leading" secondItem="7Za-Tz-gvg" secondAttribute="leading" constant="82" id="hC9-LF-Tzc"/>
                             <constraint firstItem="H08-gT-lKF" firstAttribute="leading" secondItem="7Za-Tz-gvg" secondAttribute="leading" constant="100" id="hsy-Ao-DO0"/>
-                            <constraint firstItem="7Za-Tz-gvg" firstAttribute="trailing" secondItem="ex2-3L-lfx" secondAttribute="trailing" constant="82" id="ikn-T6-3Fy"/>
                             <constraint firstItem="oLz-Ru-1Qz" firstAttribute="leading" secondItem="7Za-Tz-gvg" secondAttribute="leading" constant="147" id="oBo-Vp-vh9"/>
                             <constraint firstItem="7Za-Tz-gvg" firstAttribute="trailing" secondItem="JOx-zS-khW" secondAttribute="trailing" constant="100" id="pRQ-Ge-0aI"/>
                             <constraint firstItem="k1Q-B2-8qi" firstAttribute="top" secondItem="H08-gT-lKF" secondAttribute="bottom" constant="45" id="sZy-E0-R0g"/>
                             <constraint firstItem="7Za-Tz-gvg" firstAttribute="trailing" secondItem="k1Q-B2-8qi" secondAttribute="trailing" constant="100" id="stL-dK-9iq"/>
+                            <constraint firstItem="7Za-Tz-gvg" firstAttribute="trailing" secondItem="ex2-3L-lfx" secondAttribute="trailing" constant="82" id="vnO-VO-ChP"/>
                             <constraint firstItem="ex2-3L-lfx" firstAttribute="top" secondItem="oLz-Ru-1Qz" secondAttribute="bottom" constant="45" id="xhO-p2-UHr"/>
                             <constraint firstItem="7Za-Tz-gvg" firstAttribute="bottom" secondItem="k1Q-B2-8qi" secondAttribute="bottom" constant="50" id="zRY-fx-WIZ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="RyH-QE-HOd"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="count" destination="oLz-Ru-1Qz" id="g8h-bQ-q4z"/>
@@ -100,41 +101,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdS-CN-Wy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10.769230769230768" y="16.350710900473931"/>
+            <point key="canvasLocation" x="9.375" y="14.788732394366198"/>
         </scene>
         <!--End View Controller-->
         <scene sceneID="Y5F-vb-s6g">
             <objects>
                 <viewController storyboardIdentifier="EndView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="90P-UU-EYW" customClass="EndViewController" customModule="Trivia" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n9D-AR-OhF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You got X amount right!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-Di-LlA">
-                                <rect key="frame" x="106" y="370" width="180" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You got X amount right!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-Di-LlA">
+                                <rect key="frame" x="70" y="248" width="274" height="365"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mp-ZN-52p">
-                                <rect key="frame" x="157" y="409" width="79" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Restart"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fJv-04-MGZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kg1-Di-LlA" firstAttribute="leading" secondItem="fJv-04-MGZ" secondAttribute="leading" constant="70" id="2Yr-1M-oHf"/>
+                            <constraint firstItem="fJv-04-MGZ" firstAttribute="trailing" secondItem="Kg1-Di-LlA" secondAttribute="trailing" constant="70" id="Htl-G1-UKQ"/>
+                            <constraint firstItem="fJv-04-MGZ" firstAttribute="bottom" secondItem="Kg1-Di-LlA" secondAttribute="bottom" constant="200" id="HvI-5d-1ax"/>
+                            <constraint firstItem="Kg1-Di-LlA" firstAttribute="top" secondItem="fJv-04-MGZ" secondAttribute="top" constant="200" id="eyo-l6-4F3"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="ZRN-Wg-wDq"/>
+                    <connections>
+                        <outlet property="correctGuessesLabel" destination="Kg1-Di-LlA" id="3gF-nW-Alk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbN-dE-MmY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="39"/>
+            <point key="canvasLocation" x="727" y="14"/>
         </scene>
     </scenes>
     <resources>

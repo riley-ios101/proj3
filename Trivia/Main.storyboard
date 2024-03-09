@@ -12,7 +12,7 @@
         <!--Trivia View Controller-->
         <scene sceneID="csb-n6-s8I">
             <objects>
-                <viewController id="eQ5-1m-dRb" customClass="TriviaViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TriviaView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eQ5-1m-dRb" customClass="TriviaViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eny-ee-gUa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,7 @@
                         <outlet property="question" destination="ex2-3L-lfx" id="uWt-2L-wlJ"/>
                         <outlet property="secondAnswer" destination="GM3-cr-zMp" id="A9T-s5-IY9"/>
                         <outlet property="thirdAnswer" destination="H08-gT-lKF" id="OP5-oB-uOZ"/>
+                        <segue destination="90P-UU-EYW" kind="show" id="TgF-fO-BLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdS-CN-Wy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -129,6 +130,7 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="ZRN-Wg-wDq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbN-dE-MmY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

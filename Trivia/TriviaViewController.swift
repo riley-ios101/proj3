@@ -7,6 +7,7 @@
 import UIKit
 
 class TriviaViewController: UIViewController {
+    
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var count: UILabel!
     
@@ -41,7 +42,7 @@ class TriviaViewController: UIViewController {
         super.viewDidLoad()
         
         idx = 0
-        counter = 1
+        counter = 0
         correct = 0
         // generate question
         generateTrivia()
@@ -57,12 +58,10 @@ class TriviaViewController: UIViewController {
         
         if (counter == 3) {
             // change storyboard
-            let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "EndView") as! EndViewController
-            self.navigationController?.pushViewController(storyboard, animated: true)
-            return
+            performSegue(withIdentifier: "EndView", sender: nil)
         }
         
-        count.text = "\(counter)/3"
+        count.text = "\(counter+1)/3"
         question.text = questions[idx]
         generateAnswers(i: idx)
         idx += 1

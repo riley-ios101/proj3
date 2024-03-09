@@ -29,6 +29,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 [Different Devices](https://imgur.com/a/cWizf6F)
+
 [Demo](https://imgur.com/a/X6kpp2H)
 
 ## Notes

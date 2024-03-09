@@ -18,6 +18,7 @@
 		9A0A8F7E2B98ACA900621E8E /* TriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A8F7C2B98ACA900621E8E /* TriviaViewController.swift */; };
 		9A0A8F7F2B98ACA900621E8E /* TriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A8F7C2B98ACA900621E8E /* TriviaViewController.swift */; };
 		9A0A8F852B98B6B400621E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0A8F842B98B6B400621E8E /* Main.storyboard */; };
+		9ABBBD122B9C1097000987EC /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBBD112B9C1097000987EC /* EndViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9926AB4629DFAE1500860532 /* TriviaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A0A8F7C2B98ACA900621E8E /* TriviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewController.swift; sourceTree = "<group>"; };
 		9A0A8F842B98B6B400621E8E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9ABBBD112B9C1097000987EC /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				9926AB2329DFAE1400860532 /* AppDelegate.swift */,
 				9926AB2529DFAE1400860532 /* SceneDelegate.swift */,
 				9A0A8F7C2B98ACA900621E8E /* TriviaViewController.swift */,
+				9ABBBD112B9C1097000987EC /* EndViewController.swift */,
 				9A0A8F842B98B6B400621E8E /* Main.storyboard */,
 				9926AB2C29DFAE1400860532 /* Assets.xcassets */,
 				9926AB2E29DFAE1400860532 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABBBD122B9C1097000987EC /* EndViewController.swift in Sources */,
 				9926AB2429DFAE1400860532 /* AppDelegate.swift in Sources */,
 				9A0A8F7D2B98ACA900621E8E /* TriviaViewController.swift in Sources */,
 				9926AB2629DFAE1400860532 /* SceneDelegate.swift in Sources */,
